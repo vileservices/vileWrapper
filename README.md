@@ -1,5 +1,4 @@
 # "Introduction"
-## "Example section for showcasing vileWrapper usage"
 
 <Note>
   Welcome to the vile API wrapper!  
