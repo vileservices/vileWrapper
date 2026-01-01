@@ -1,7 +1,5 @@
----
-title: "Introduction"
-description: "Example section for showcasing vileWrapper usage"
----
+# "Introduction"
+## "Example section for showcasing vileWrapper usage"
 
 <Note>
   Welcome to the vile API wrapper!  
