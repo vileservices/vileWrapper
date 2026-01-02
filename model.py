@@ -76,9 +76,15 @@ class SoundCloudTracks(BaseModel):
     tracks: List[SoundCloudTrack] = Field(..., title="List of Tracks")
 
 class TikTokStatistics(BaseModel):
+    followers: int = Field(..., title="Followers Count")
+    following: int = Field(..., title="Following Count")
     likes: int = Field(..., title="Likes Count")
+    videos: int = Field(..., title="Videos Count")
+
+class TikTokVideoStatistics(BaseModel):
     comments: int = Field(..., title="Comments Count")
     shares: int = Field(..., title="Shares Count")
+    likes: int = Field(..., title="Likes Count")
 
 class TikTokMedia(BaseModel):
     url: str = Field(..., title="Media URL")
@@ -96,7 +102,7 @@ class TikTokPost(BaseModel):
     url: str = Field(..., title="Post URL")
     created_at: datetime = Field(..., title="Creation Timestamp")
     music: Optional[TikTokMusic] = Field(None, title="Attached Music")
-    statistics: TikTokStatistics = Field(..., title="Post Statistics")
+    statistics: TikTokVideoStatistics = Field(..., title="Post Statistics")
     media: Union[TikTokMedia, List[TikTokMedia]] = Field(..., title="Media Items")
 
 class TikTokPosts(BaseModel):
