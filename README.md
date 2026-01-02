@@ -4,7 +4,7 @@
   Welcome to the vile API wrapper!  
 
   - To use this API, you need a valid **API key**, which can be obtained by contacting the developers.
-  - This is a **paid API** with a base price of **$8/month**.
+  - This is a **paid API** with a base price of **$5/month**.
   - For support or questions, you can reach out to the developers directly.
 </Note>
 
