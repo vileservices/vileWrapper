@@ -170,11 +170,16 @@ class YouTubeProfile(BaseModel):
     description: Optional[str] = Field(None, title="Profile Description")
     avatar: str = Field(..., title="Avatar URL")
 
+class YouTubeVideoProfile(BaseModel):
+    id: str = Field(..., title="Profile ID")
+    username: str = Field(..., title="Username")
+
+
 class YouTubeVideo(BaseModel):
     id: str = Field(..., title="Video ID")
     created_at: datetime = Field(..., title="Creation Timestamp")
     title: str = Field(..., title="Video Title")
     description: Optional[str] = Field(None, title="Video Description")
     thumbnail: str = Field(..., title="Thumbnail URL")
-    author: YouTubeProfile = Field(..., title="Video Author")
+    author: YouTubeVideoProfile = Field(..., title="Video Author")
     url: str = Field(..., title="Video URL")
