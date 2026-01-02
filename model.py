@@ -121,6 +121,10 @@ class TikTokProfile(BaseModel):
     private: bool = Field(..., title="Private Account")
     statistics: TikTokStatistics = Field(..., title="Profile Statistics")
 
+    @property
+    def url(self) -> str:
+        return f"https://www.tiktok.com/@{self.username}"
+    
 class TwitterStatistics(BaseModel):
     followers: int = Field(0, title="Followers Count")
     following: int = Field(0, title="Following Count")
