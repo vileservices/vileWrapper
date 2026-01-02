@@ -13,7 +13,7 @@ class vileWrapper:
     def __init__(self, api_key: str) -> None:
         self.api_key: str = api_key
         self.session: ClientSession = ClientSession(
-            base_url="http://api.vile.bot",
+            base_url="https://api.vile.bot",
             headers={"Authorization": api_key}
         )
         self.soundcloud = SoundCloud(self)
